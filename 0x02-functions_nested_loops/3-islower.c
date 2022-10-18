@@ -3,7 +3,7 @@
 /**
  *  * _islower - checks for lowercase character
  */
-int _islower(int l)
+int _islower(int c)
 {
-return (l >= 'a' && l <= 'z');
+return (c >= 'a' && c <= 'z');
 }
