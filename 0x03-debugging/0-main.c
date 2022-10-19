@@ -9,10 +9,8 @@ int main(void)
 {
 	int i;
 
-if (i < 0)
-	positive_or_negative("Negative");
-else
-  	positive_or_negative("Positive");
+	i = 0;
+	positive_or_negative(i);
 
 	return (0);
 }
