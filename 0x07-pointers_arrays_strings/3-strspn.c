@@ -1,13 +1,26 @@
 #include "main.h"
 
-void *_memcpy(void *dest, const void *src, size_t n)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int index;
-	unsigned char *destination = dest;
-	const unsigned char *source = src;
+	unsigned int bytes = 0;
+	int index;
 
-	for (index = 0; index < n; index++)
-		destination[index] = source[index];
+	while (*s)
+	{
+		for (index = 0; accept[index]; index++)
+		{
+			if (*s == accept[index])
+			{
+				bytes++;
+				break;
+			}
 
-	return (dest);
+			else if (accept[index + 1] == '\0')
+				return (bytes);
+		}
+
+		s++;
+	}
+
+	return (bytes);
 }
