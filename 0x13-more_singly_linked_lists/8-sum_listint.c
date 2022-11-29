@@ -1,16 +1,14 @@
 #include "lists.h"
 
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int sum_listint(listint_t *head)
 {
-	unsigned int node;
+	int sum = 0;
 
-	for (node = 0; node < index; node++)
+	while (head)
 	{
-		if (head == NULL)
-			return (NULL);
-
+		sum += head->n;
 		head = head->next;
 	}
 
-	return (head);
+	return (sum);
 }
