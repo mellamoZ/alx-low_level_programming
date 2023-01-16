@@ -1,1 +1,1 @@
-gcc -Wall -fPIC -c *.c
+gcc -L testcode.c -lmain.h -o testcode.c
